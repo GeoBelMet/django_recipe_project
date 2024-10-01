@@ -19,11 +19,14 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from recipe import views
+#from recipe import views
+from event_manager import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('recipe.urls')),
+    path('', include('event_manager.urls')),
+    #path('login/', include('event_manager.urls')),
+    #path('', include('recipe.urls')),
 ]
 
 # Serve media files in development
